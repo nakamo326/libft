@@ -6,7 +6,7 @@
 /*   By: ynakamot <ynakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 13:57:57 by ynakamot          #+#    #+#             */
-/*   Updated: 2020/10/15 17:19:45 by ynakamot         ###   ########.fr       */
+/*   Updated: 2020/10/15 23:57:04 by ynakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!s)
 		return (NULL);
 	if (!(slen = ft_strlen(s)))
-		return (NULL);
+		return ("");
 	if (slen < (start + len))
 		len = slen - start;
 	if (!(p = malloc(sizeof(char) * (len + 1))))
