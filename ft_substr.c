@@ -6,7 +6,7 @@
 /*   By: ynakamot <ynakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 13:57:57 by ynakamot          #+#    #+#             */
-/*   Updated: 2020/10/16 14:33:24 by ynakamot         ###   ########.fr       */
+/*   Updated: 2020/10/16 20:24:50 by ynakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (ft_strdup(""));
 	if (slen < (start + len))
 		len = slen - start;
-	if (!(p = malloc(sizeof(char) * (len + 1))))
+	if (!(p = calloc(sizeof(char), len + 1)))
 		return (NULL);
 	i = 0;
 	while (i < len)
@@ -33,6 +33,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		p[i] = s[start + i];
 		i++;
 	}
-	p[i] = '\0';
 	return (p);
 }
