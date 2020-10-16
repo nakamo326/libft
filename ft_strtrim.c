@@ -6,7 +6,7 @@
 /*   By: ynakamot <ynakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 10:17:53 by ynakamot          #+#    #+#             */
-/*   Updated: 2020/10/16 13:45:05 by ynakamot         ###   ########.fr       */
+/*   Updated: 2020/10/16 13:58:01 by ynakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,9 @@ char		*ft_strtrim(char const *s1, char const *set)
 	if (s1[i] == '\0')
 		return (ft_strdup(""));
 	len = ft_strlen(&s1[i]);
-	while(isset(s1[i + len - 1], set))
+	while (isset(s1[i + len - 1], set))
 		len--;
-	if(!(str = ft_substr(s1, (unsigned int)i, len)))
+	if (!(str = ft_substr(s1, (unsigned int)i, len)))
 		return (NULL);
 	return (str);
 }
