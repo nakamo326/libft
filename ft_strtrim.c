@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim copy.c                                  :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynakamot <ynakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 10:17:53 by ynakamot          #+#    #+#             */
-/*   Updated: 2020/10/16 10:38:25 by ynakamot         ###   ########.fr       */
+/*   Updated: 2020/10/16 10:41:15 by ynakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char		*ft_strtrim(char const *s1, char const *set)
 	i = 0;
 	while (isset(s1[i], set))
 		i++;
-	len = ft_strlen(s1[i]);
+	len = ft_strlen(&s1[i]);
 	while(isset(s1[i + len - 1], set))
 		len--;
 	if(!(str = ft_substr(s1, (unsigned int)i, len)))
