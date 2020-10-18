@@ -6,12 +6,13 @@
 /*   By: ynakamot <ynakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/06 20:53:24 by ynakamot          #+#    #+#             */
-/*   Updated: 2020/10/12 23:16:06 by ynakamot         ###   ########.fr       */
+/*   Updated: 2020/10/18 10:04:27 by ynakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+//copy N bytes from SRC to DEST,stopping when char C is found.
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
 	size_t			i;

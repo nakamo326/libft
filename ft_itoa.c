@@ -6,7 +6,7 @@
 /*   By: ynakamot <ynakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/11 16:48:46 by ynakamot          #+#    #+#             */
-/*   Updated: 2020/10/14 23:02:03 by ynakamot         ###   ########.fr       */
+/*   Updated: 2020/10/18 09:56:09 by ynakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ static unsigned int	init_num(int n)
 		return ((unsigned int)n);
 }
 
+//Convert an integer to a string.
 char				*ft_itoa(int n)
 {
 	unsigned int	unb;
