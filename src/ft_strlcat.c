@@ -6,12 +6,13 @@
 /*   By: ynakamot <ynakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/13 20:04:24 by ynakamot          #+#    #+#             */
-/*   Updated: 2020/10/13 00:00:18 by ynakamot         ###   ########.fr       */
+/*   Updated: 2020/10/18 10:36:11 by ynakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+//append string SRC to end of DST.and NUL-terminate.
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t dl;

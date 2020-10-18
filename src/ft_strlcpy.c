@@ -6,12 +6,13 @@
 /*   By: ynakamot <ynakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/11 22:55:25 by ynakamot          #+#    #+#             */
-/*   Updated: 2020/10/13 00:10:43 by ynakamot         ###   ########.fr       */
+/*   Updated: 2020/10/18 10:24:15 by ynakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+//copy DSTSIZE - 1 chars from SRC to DST,and NUL-terminating the result.return is length of SRC.
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
