@@ -6,7 +6,7 @@
 /*   By: ynakamot <ynakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/14 08:53:27 by ynakamot          #+#    #+#             */
-/*   Updated: 2020/10/18 09:55:42 by ynakamot         ###   ########.fr       */
+/*   Updated: 2020/11/07 22:57:10 by ynakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int			ft_atoi(const char *nptr)
 {
 	int				sign;
 	unsigned long	num;
+
 	num = 0;
 	sign = 1;
 	while (ft_isspace((char *)nptr))
