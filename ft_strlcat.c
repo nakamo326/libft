@@ -1,38 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynakamot <ynakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/07 13:32:15 by ynakamot          #+#    #+#             */
-/*   Updated: 2020/10/18 10:07:51 by ynakamot         ###   ########.fr       */
+/*   Created: 2020/08/13 20:04:24 by ynakamot          #+#    #+#             */
+/*   Updated: 2020/11/07 22:53:24 by ynakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//copy N bytes from SRC to DEST.the memory areas may overlap.
-void	*ft_memmove(void *dest, const void *src, size_t n)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t			i;
-	unsigned char	*d;
-	unsigned char	*s;
+	size_t dl;
+	size_t sl;
+	size_t i;
 
-	d = (unsigned char *)dest;
-	s = (unsigned char *)src;
-	if (d == NULL && s == NULL)
-		return (dest);
-	if (d < s)
-		ft_memcpy(d, s, n);
-	else
+	i = 0;
+	dl = ft_strlen(dst);
+	sl = ft_strlen(src);
+	if (dstsize == 0)
+		return (sl + dstsize);
+	while (src[i] != '\0' && (dl + i) < dstsize - 1)
 	{
-		i = 1;
-		while (i <= n)
-		{
-			d[n - i] = s[n - i];
-			i++;
-		}
+		dst[dl + i] = src[i];
+		i++;
 	}
-	return (dest);
+	if (src[i] == '\0' || (dl + i) == dstsize - 1)
+		dst[dl + i] = '\0';
+	if (dl >= dstsize)
+		return (sl + dstsize);
+	else
+		return (dl + sl);
 }

@@ -1,38 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynakamot <ynakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/13 20:04:24 by ynakamot          #+#    #+#             */
-/*   Updated: 2020/10/18 10:36:11 by ynakamot         ###   ########.fr       */
+/*   Created: 2020/08/11 22:55:25 by ynakamot          #+#    #+#             */
+/*   Updated: 2020/11/07 22:53:30 by ynakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//append string SRC to end of DST.and NUL-terminate.
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t dl;
-	size_t sl;
-	size_t i;
+	size_t	i;
 
-	i = 0;
-	dl = ft_strlen(dst);
-	sl = ft_strlen(src);
+	if (!dst || !src)
+		return (0);
 	if (dstsize == 0)
-		return (sl + dstsize);
-	while (src[i] != '\0' && (dl + i) < dstsize - 1)
+		return (ft_strlen(src));
+	i = 0;
+	while (i < dstsize - 1 && src[i] != '\0')
 	{
-		dst[dl + i] = src[i];
+		dst[i] = src[i];
 		i++;
 	}
-	if (src[i] == '\0' || (dl + i) == dstsize - 1)
-		dst[dl + i] = '\0';
-	if (dl >= dstsize)
-		return (sl + dstsize);
-	else
-		return (dl + sl);
+	dst[i] = '\0';
+	while (src[i] != '\0')
+		i++;
+	return (i);
 }

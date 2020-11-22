@@ -1,64 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynakamot <ynakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/11 16:48:46 by ynakamot          #+#    #+#             */
-/*   Updated: 2020/10/18 09:56:09 by ynakamot         ###   ########.fr       */
+/*   Updated: 2020/11/22 10:00:41 by ynakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stdlib.h"
+#include "libft.h"
 
-static void			output_number(unsigned int unb, char *p)
+static void	output_number(unsigned long long n, char *bs, size_t len, char *p)
 {
 	char *tmp;
 
 	tmp = p;
-	if (unb / 10 == 0)
+	if (n / len == 0)
 	{
-		*tmp = '0' + unb;
+		*tmp = bs[n];
 		return ;
 	}
-	output_number(unb / 10, --p);
-	*tmp = '0' + unb % 10;
+	output_number(n / len, bs, len, --p);
+	*tmp = bs[n % len];
 }
 
-static unsigned int	init_num(int n)
+char		*ft_lltoa_base(unsigned long long n, char *base)
 {
-	if (n < 0)
-		return ((unsigned int)-1 * n);
-	else
-		return ((unsigned int)n);
-}
+	unsigned long long	tmp;
+	char				*str;
+	char				*p;
+	size_t				len;
+	size_t				blen;
 
-//Convert an integer to a string.
-char				*ft_itoa(int n)
-{
-	unsigned int	unb;
-	char			*str;
-	char			*p;
-	int				len;
-
-	unb = init_num(n);
+	tmp = n;
+	blen = ft_strlen(base);
 	len = 1;
-	while (unb >= 10)
+	while (n >= blen)
 	{
-		unb = unb / 10;
+		n = n / blen;
 		len++;
 	}
-	if (n < 0)
-		len++;
 	if (!(str = malloc(sizeof(char) * (len + 1))))
 		return (NULL);
 	p = str + (int)len;
 	*p = '\0';
 	p--;
-	unb = init_num(n);
-	output_number(unb, p);
-	if (n < 0)
-		str[0] = '-';
+	n = tmp;
+	output_number(n, base, blen, p);
 	return (str);
 }

@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynakamot <ynakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/05 23:34:25 by ynakamot          #+#    #+#             */
-/*   Updated: 2020/10/18 10:07:12 by ynakamot         ###   ########.fr       */
+/*   Created: 2020/10/06 20:53:24 by ynakamot          #+#    #+#             */
+/*   Updated: 2020/11/07 22:53:02 by ynakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//copy N bytes from SRC to DEST.must not overlap!
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
 	size_t			i;
 	unsigned char	*d;
 	unsigned char	*s;
+	unsigned char	chr;
 
 	i = 0;
 	d = (unsigned char *)dest;
 	s = (unsigned char *)src;
-	if (n == 0 || d == s)
-		return (dest);
+	chr = (unsigned char)c;
 	while (i < n)
 	{
 		d[i] = s[i];
+		if (d[i] == chr)
+			return (&d[i + 1]);
 		i++;
 	}
-	return (dest);
+	return (0);
 }

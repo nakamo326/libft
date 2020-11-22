@@ -6,7 +6,7 @@
 /*   By: ynakamot <ynakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/14 10:11:20 by ynakamot          #+#    #+#             */
-/*   Updated: 2020/11/10 23:11:03 by ynakamot         ###   ########.fr       */
+/*   Updated: 2020/11/17 09:49:46 by ynakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,18 +48,18 @@ static size_t	base_multiple_check(char *base, size_t len)
 	return (1);
 }
 
-static size_t	output_number_base(unsigned long long unb, char *base, size_t blen)
+static size_t	output_number_base(unsigned long long unb, char *bs, size_t bl)
 {
 	static size_t len;
 
 	len++;
-	if (unb / blen == 0)
+	if (unb / bl == 0)
 	{
-		ft_putchar_fd(base[unb], 1);
+		ft_putchar_fd(bs[unb], 1);
 		return (len);
 	}
-	output_number_base(unb / blen, base, blen);
-	ft_putchar_fd(base[unb % blen], 1);
+	output_number_base(unb / bl, bs, bl);
+	ft_putchar_fd(bs[unb % bl], 1);
 	return (len);
 }
 

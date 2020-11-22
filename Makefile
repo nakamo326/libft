@@ -6,7 +6,7 @@
 #    By: ynakamot <ynakamot@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/13 10:43:27 by ynakamot          #+#    #+#              #
-#    Updated: 2020/11/22 10:02:51 by ynakamot         ###   ########.fr        #
+#    Updated: 2020/11/22 10:25:12 by ynakamot         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,11 +24,11 @@ SRCFILE =	ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 
 B_SRCFILE=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
 			ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
-			ft_lstclear.c ft_lstiter.c ft_lstmap.c
+			ft_lstclear.c ft_lstiter.c ft_lstmap.c ft_lstinsert.c
 
-OBJECTS = $(SRCFILE:.c=.o)
-B_OBJECTS = $(B_SRCFILE:.c=.o)
-
+OBJDIR = ./obj
+OBJECTS = $(addprefix $(OBJDIR)/, $(notdir $(SRCFILE:.c=.o)))
+B_OBJECTS = $(addprefix $(OBJDIR)/, $(notdir $(B_SRCFILE:.c=.o)))
 
 all: $(NAME)
 
@@ -38,7 +38,8 @@ $(NAME): $(OBJECTS)
 bonus: $(OBJECTS) $(B_OBJECTS)
 	ar rcs $(NAME) $(OBJECTS) $(B_OBJECTS)
 
-%.o: %.c
+$(OBJDIR)/%.o: %.c
+	mkdir -p $(OBJDIR)
 	gcc $(CFLAGS) -c $< -o $@ -I.
 
 clean:

@@ -6,7 +6,7 @@
 /*   By: ynakamot <ynakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 16:49:44 by ynakamot          #+#    #+#             */
-/*   Updated: 2020/11/22 10:10:49 by ynakamot         ###   ########.fr       */
+/*   Updated: 2020/11/22 10:20:01 by ynakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,5 +74,6 @@ void			ft_lstclear(t_list **lst, void (*del)(void*));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap
 				(t_list *lst, void *(*f)(void *), void (*del)(void *));
+void			ft_lstinsert(t_list *lst, t_list *new);
 
 #endif

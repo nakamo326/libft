@@ -6,7 +6,7 @@
 /*   By: ynakamot <ynakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/14 08:53:27 by ynakamot          #+#    #+#             */
-/*   Updated: 2020/11/07 22:57:10 by ynakamot         ###   ########.fr       */
+/*   Updated: 2020/11/07 22:56:19 by ynakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ static int	ft_isspace(char *str)
 	return (0);
 }
 
-//Convert a string to an integer.
 int			ft_atoi(const char *nptr)
 {
 	int				sign;

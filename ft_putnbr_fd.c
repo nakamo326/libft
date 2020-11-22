@@ -6,7 +6,7 @@
 /*   By: ynakamot <ynakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 14:56:05 by ynakamot          #+#    #+#             */
-/*   Updated: 2020/11/08 09:46:49 by ynakamot         ###   ########.fr       */
+/*   Updated: 2020/11/08 09:42:53 by ynakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ void		ft_putnbr_fd(int n, int fd)
 		unb = -1 * n;
 	}
 	else
+	{
 		unb = n;
+	}
 	output_num(unb, fd);
-
 }
