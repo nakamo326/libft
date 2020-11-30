@@ -6,7 +6,7 @@
 /*   By: ynakamot <ynakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 16:49:44 by ynakamot          #+#    #+#             */
-/*   Updated: 2020/11/22 10:20:01 by ynakamot         ###   ########.fr       */
+/*   Updated: 2020/11/30 11:28:55 by ynakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ int				ft_isascii(int c);
 int				ft_isprint(int c);
 int				ft_toupper(int c);
 int				ft_tolower(int c);
+int				ft_isspace(int c);
 void			*ft_calloc(size_t count, size_t size);
 char			*ft_strdup(const char *src);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
