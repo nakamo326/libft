@@ -6,7 +6,7 @@
 /*   By: ynakamot <ynakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/07 23:26:20 by ynakamot          #+#    #+#             */
-/*   Updated: 2020/10/16 00:52:02 by ynakamot         ###   ########.fr       */
+/*   Updated: 2020/12/01 20:20:57 by ynakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ char	*ft_strchr(const char *s, int c)
 {
 	char	*r;
 
+	if (!s)
+	return (NULL);
 	r = (char *)s;
 	while (*r)
 	{
