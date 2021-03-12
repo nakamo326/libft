@@ -40,7 +40,7 @@ bonus: $(OBJECTS) $(B_OBJECTS)
 	ar rcs $(NAME) $(OBJECTS) $(B_OBJECTS)
 
 $(OBJDIR)/%.o: %.c
-	mkdir -p $(OBJDIR)
+	@mkdir -p $(OBJDIR)
 	gcc $(CFLAGS) -c $< -o $@ -I.
 
 clean:
