@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
+/*   ft_lltoa_base.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynakamot <ynakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/11 16:48:46 by ynakamot          #+#    #+#             */
-/*   Updated: 2020/11/22 10:00:41 by ynakamot         ###   ########.fr       */
+/*   Updated: 2021/03/13 09:31:41 by ynakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static void	output_number(unsigned long long n, char *bs, size_t len, char *p)
 {
-	char *tmp;
+	char	*tmp;
 
 	tmp = p;
 	if (n / len == 0)
@@ -26,7 +26,7 @@ static void	output_number(unsigned long long n, char *bs, size_t len, char *p)
 	*tmp = bs[n % len];
 }
 
-char		*ft_lltoa_base(unsigned long long n, char *base)
+char	*ft_lltoa_base(unsigned long long n, char *base)
 {
 	unsigned long long	tmp;
 	char				*str;
@@ -42,7 +42,8 @@ char		*ft_lltoa_base(unsigned long long n, char *base)
 		n = n / blen;
 		len++;
 	}
-	if (!(str = malloc(sizeof(char) * (len + 1))))
+	str = malloc(sizeof(char) * (len + 1));
+	if (!str)
 		return (NULL);
 	p = str + (int)len;
 	*p = '\0';

@@ -6,13 +6,13 @@
 /*   By: ynakamot <ynakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/14 08:53:27 by ynakamot          #+#    #+#             */
-/*   Updated: 2020/12/01 18:20:57 by ynakamot         ###   ########.fr       */
+/*   Updated: 2021/03/13 09:30:10 by ynakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_atoi(const char *nptr)
+int	ft_atoi(const char *nptr)
 {
 	int				sign;
 	unsigned long	num;

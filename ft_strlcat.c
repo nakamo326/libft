@@ -6,7 +6,7 @@
 /*   By: ynakamot <ynakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/13 20:04:24 by ynakamot          #+#    #+#             */
-/*   Updated: 2020/11/07 22:53:24 by ynakamot         ###   ########.fr       */
+/*   Updated: 2021/03/13 09:35:45 by ynakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t dl;
-	size_t sl;
-	size_t i;
+	size_t	dl;
+	size_t	sl;
+	size_t	i;
 
 	i = 0;
 	dl = ft_strlen(dst);

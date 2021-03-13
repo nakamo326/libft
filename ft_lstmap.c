@@ -6,7 +6,7 @@
 /*   By: ynakamot <ynakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/13 18:02:35 by ynakamot          #+#    #+#             */
-/*   Updated: 2020/10/19 17:45:00 by ynakamot         ###   ########.fr       */
+/*   Updated: 2021/03/13 09:35:33 by ynakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list *new;
-	t_list *head;
+	t_list	*new;
+	t_list	*head;
 
 	if (!lst || !f)
 		return (NULL);

@@ -6,15 +6,15 @@
 /*   By: ynakamot <ynakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/11 16:48:46 by ynakamot          #+#    #+#             */
-/*   Updated: 2020/11/12 21:38:08 by ynakamot         ###   ########.fr       */
+/*   Updated: 2021/03/13 09:45:37 by ynakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stdlib.h"
 
-static void			output_number(long long unb, char *p)
+static void	output_number(long long unb, char *p)
 {
-	char *tmp;
+	char	*tmp;
 
 	tmp = p;
 	if (unb / 10 == 0)
@@ -29,12 +29,12 @@ static void			output_number(long long unb, char *p)
 static long long	init_num(long n)
 {
 	if (n < 0)
-		return ((long long)-1 * n);
+		return ((long long) - 1 * n);
 	else
 		return ((long long)n);
 }
 
-char				*ft_ltoa(long n)
+char	*ft_ltoa(long n)
 {
 	long long	unb;
 	char		*str;
@@ -50,7 +50,8 @@ char				*ft_ltoa(long n)
 	}
 	if (n < 0)
 		len++;
-	if (!(str = malloc(sizeof(char) * (len + 1))))
+	str = malloc(sizeof(char) * (len + 1));
+	if (!str)
 		return (NULL);
 	p = str + len;
 	*p = '\0';

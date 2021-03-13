@@ -6,7 +6,7 @@
 /*   By: ynakamot <ynakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 14:56:05 by ynakamot          #+#    #+#             */
-/*   Updated: 2020/11/08 09:42:53 by ynakamot         ###   ########.fr       */
+/*   Updated: 2021/03/13 09:32:46 by ynakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ static void	output_num(unsigned int unb, int fd)
 	ft_putchar_fd('0' + unb % 10, fd);
 }
 
-void		ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned int unb;
+	unsigned int	unb;
 
 	if (n < 0)
 	{

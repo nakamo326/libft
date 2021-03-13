@@ -6,7 +6,7 @@
 /*   By: ynakamot <ynakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/16 15:19:35 by ynakamot          #+#    #+#             */
-/*   Updated: 2021/01/19 22:00:28 by ynakamot         ###   ########.fr       */
+/*   Updated: 2021/03/13 09:35:14 by ynakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstinsert(t_list *lst, t_list *new)
 {
-	t_list *tmp;
+	t_list	*tmp;
 
 	if (!lst || !new)
 		return ;

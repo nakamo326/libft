@@ -6,7 +6,7 @@
 /*   By: ynakamot <ynakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/14 10:11:20 by ynakamot          #+#    #+#             */
-/*   Updated: 2020/11/17 09:49:46 by ynakamot         ###   ########.fr       */
+/*   Updated: 2021/03/13 09:42:29 by ynakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static size_t	base_check(char *base)
 {
-	size_t len;
+	size_t	len;
 
 	len = 0;
 	while (base[len] != '\0')
@@ -30,8 +30,8 @@ static size_t	base_check(char *base)
 
 static size_t	base_multiple_check(char *base, size_t len)
 {
-	size_t i;
-	size_t j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	while (i < len)
@@ -50,7 +50,7 @@ static size_t	base_multiple_check(char *base, size_t len)
 
 static size_t	output_number_base(unsigned long long unb, char *bs, size_t bl)
 {
-	static size_t len;
+	static size_t	len;
 
 	len++;
 	if (unb / bl == 0)
@@ -63,7 +63,7 @@ static size_t	output_number_base(unsigned long long unb, char *bs, size_t bl)
 	return (len);
 }
 
-size_t			ft_putnbr_base(unsigned long long nbr, char *base)
+size_t	ft_putnbr_base(unsigned long long nbr, char *base)
 {
 	size_t	blen;
 	size_t	len;
