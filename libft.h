@@ -6,7 +6,7 @@
 /*   By: ynakamot <ynakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 16:49:44 by ynakamot          #+#    #+#             */
-/*   Updated: 2021/03/15 10:11:35 by ynakamot         ###   ########.fr       */
+/*   Updated: 2021/04/07 09:38:19 by ynakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ char			*ft_itoa(int n);
 char			*ft_ltoa(long n);
 char			*ft_lltoa_base(unsigned long long n, char *base);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+int				ft_putchar(int n);
 void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char *s, int fd);
 void			ft_putendl_fd(char *s, int fd);
@@ -80,5 +81,6 @@ void			ft_free_split(char **strs);
 void			*ft_realloc(void *ptr, size_t size);
 void			*ft_sprealloc(void *ptr, size_t size);
 char			**ft_split_multi(char *str, char *set);
+char			*ft_str_sandwich(char *filling, char *bread);
 
 #endif
