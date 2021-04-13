@@ -1,31 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free_split.c                                    :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynakamot <ynakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/30 21:35:23 by ynakamot          #+#    #+#             */
-/*   Updated: 2021/04/13 09:14:50 by ynakamot         ###   ########.fr       */
+/*   Created: 2021/04/07 09:36:39 by ynakamot          #+#    #+#             */
+/*   Updated: 2021/04/07 09:39:19 by ynakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_free_split(char **strs)
+int	ft_putchar(int n)
 {
-	int	i;
+	char c;
 
-	i = 0;
-	if (!strs)
-		return ;
-	while (strs[i] != NULL)
-		i++;
-	while (i >= 0)
-	{
-		free(strs[i]);
-		i--;
-	}
-	free(strs);
-	return (NULL);
+	c = (char)n;
+	write(STDOUT_FILENO, &c, 1);
+	return (n);
 }
