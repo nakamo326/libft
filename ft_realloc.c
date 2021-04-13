@@ -6,7 +6,7 @@
 /*   By: ynakamot <ynakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/11 00:47:35 by ynakamot          #+#    #+#             */
-/*   Updated: 2021/03/11 00:49:51 by ynakamot         ###   ########.fr       */
+/*   Updated: 2021/03/13 09:36:26 by ynakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ void	*ft_realloc(void *ptr, size_t size)
 {
 	void	*new;
 
-	if (!(new = malloc(size)))
+	new = malloc(size);
+	if (!new)
 		return (NULL);
 	if (ptr == NULL)
 		return (new);

@@ -1,24 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstinsert.c                                     :+:      :+:    :+:   */
+/*   ft_wrap_malloc.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ynakamot <ynakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/16 15:19:35 by ynakamot          #+#    #+#             */
-/*   Updated: 2021/03/13 09:35:14 by ynakamot         ###   ########.fr       */
+/*   Created: 2021/03/13 09:49:06 by ynakamot          #+#    #+#             */
+/*   Updated: 2021/03/13 09:53:56 by ynakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstinsert(t_list *lst, t_list *new)
+int	ft_wmalloc(void **ptr, size_t size)
 {
-	t_list	*tmp;
-
-	if (!lst || !new)
-		return ;
-	tmp = lst->next;
-	lst->next = new;
-	new->next = tmp;
+	*ptr = malloc(size);
+	if (!*ptr)
+		return (0);
+	return (1);
 }

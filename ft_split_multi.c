@@ -6,13 +6,13 @@
 /*   By: ynakamot <ynakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 19:02:03 by ynakamot          #+#    #+#             */
-/*   Updated: 2021/03/15 10:16:44 by ynakamot         ###   ########.fr       */
+/*   Updated: 2021/04/05 11:14:45 by ynakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		is_sep(char str, char *set)
+static int	is_sep(char str, char *set)
 {
 	while (*set != '\0')
 	{
@@ -23,9 +23,9 @@ static int		is_sep(char str, char *set)
 	return (0);
 }
 
-static int		check_str(char *str, char *set)
+static int	check_str(char *str, char *set)
 {
-	int w;
+	int	w;
 
 	w = 0;
 	while (*str)
@@ -33,7 +33,7 @@ static int		check_str(char *str, char *set)
 		if (is_sep(*str, set))
 		{
 			str++;
-			continue;
+			continue ;
 		}
 		w++;
 		while (*str && !is_sep(*str, set))
@@ -42,7 +42,7 @@ static int		check_str(char *str, char *set)
 	return (w);
 }
 
-static char		**split_wrd(char **ret, char *str, char *set, int wrds)
+static char	**split_wrd(char **ret, char *str, char *set, int wrds)
 {
 	int		i;
 	int		len;
@@ -69,7 +69,7 @@ static char		**split_wrd(char **ret, char *str, char *set, int wrds)
 	return (ret);
 }
 
-char			**ft_split_multi(char *str, char *set)
+char	**ft_split_multi(char *str, char *set)
 {
 	char	**ret;
 	int		wrds;
@@ -77,7 +77,8 @@ char			**ft_split_multi(char *str, char *set)
 	if (!str)
 		return (NULL);
 	wrds = check_str(str, set);
-	if (!(ret = (char **)malloc(sizeof(*ret) * (wrds + 1))))
+	ret = (char **)malloc(sizeof(*ret) * (wrds + 1));
+	if (!ret)
 		return (NULL);
 	ret[wrds] = NULL;
 	if (!split_wrd(ret, str, set, wrds))

@@ -6,7 +6,7 @@
 /*   By: ynakamot <ynakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 21:35:23 by ynakamot          #+#    #+#             */
-/*   Updated: 2021/04/08 21:44:42 by ynakamot         ###   ########.fr       */
+/*   Updated: 2021/04/13 09:14:50 by ynakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_free_split(char **strs)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (!strs)

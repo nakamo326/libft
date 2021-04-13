@@ -6,7 +6,7 @@
 /*   By: ynakamot <ynakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 09:36:39 by ynakamot          #+#    #+#             */
-/*   Updated: 2021/04/07 09:39:19 by ynakamot         ###   ########.fr       */
+/*   Updated: 2021/04/13 09:20:34 by ynakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_putchar(int n)
 {
-	char c;
+	char	c;
 
 	c = (char)n;
 	write(STDOUT_FILENO, &c, 1);

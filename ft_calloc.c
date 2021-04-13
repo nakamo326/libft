@@ -6,7 +6,7 @@
 /*   By: ynakamot <ynakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 13:23:48 by ynakamot          #+#    #+#             */
-/*   Updated: 2020/11/07 22:52:40 by ynakamot         ###   ########.fr       */
+/*   Updated: 2021/03/13 09:34:31 by ynakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
 
-	if (!(ptr = malloc(size * count)))
+	ptr = malloc(size * count);
+	if (!ptr)
 		return (NULL);
 	ft_bzero(ptr, size * count);
 	return (ptr);

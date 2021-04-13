@@ -6,7 +6,7 @@
 /*   By: ynakamot <ynakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 09:38:05 by ynakamot          #+#    #+#             */
-/*   Updated: 2021/04/07 09:38:07 by ynakamot         ###   ########.fr       */
+/*   Updated: 2021/04/13 09:20:56 by ynakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_str_sandwich(char *filling, char *bread)
 {
-	char *sandwich;
-	char *bread_with_topping;
+	char	*sandwich;
+	char	*bread_with_topping;
 
 	if (!filling)
 		return (NULL);

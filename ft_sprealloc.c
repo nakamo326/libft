@@ -6,7 +6,7 @@
 /*   By: ynakamot <ynakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/15 09:55:02 by ynakamot          #+#    #+#             */
-/*   Updated: 2021/03/15 10:16:49 by ynakamot         ###   ########.fr       */
+/*   Updated: 2021/04/05 11:13:24 by ynakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ void	*ft_sprealloc(void *ptr, size_t size)
 	void	*new;
 	int		i;
 
-	if (!(new = malloc(size)))
+	new = malloc(size);
+	if (!new)
 		return (NULL);
 	if (ptr == NULL)
 		return (new);
