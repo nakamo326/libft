@@ -6,7 +6,7 @@
 /*   By: ynakamot <ynakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 16:49:44 by ynakamot          #+#    #+#             */
-/*   Updated: 2021/04/14 11:14:24 by ynakamot         ###   ########.fr       */
+/*   Updated: 2021/04/20 23:03:57 by ynakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,5 +81,6 @@ int		ft_wmalloc(void **ptr, size_t size);
 void	*ft_sprealloc(void *ptr, size_t size);
 char	**ft_split_multi(char *str, char *set);
 char	*ft_str_sandwich(char *filling, char *bread);
+void	ft_free(void	**ptr);
 
 #endif
