@@ -6,7 +6,7 @@
 #    By: ynakamot <ynakamot@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/13 10:43:27 by ynakamot          #+#    #+#              #
-#    Updated: 2021/04/20 23:04:32 by ynakamot         ###   ########.fr        #
+#    Updated: 2021/04/20 23:06:20 by ynakamot         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,8 +22,8 @@ SRCFILE =	ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 			ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 			ft_putnbr_base_fd.c ft_lltoa_base.c ft_ltoa.c ft_abs.c \
 			ft_isspace.c ft_free_split.c ft_realloc.c ft_sprealloc.c \
-			ft_split_multi.c ft_putchar.c ft_str_sandwich.c ft_wrap_malloc.c
-			ft_free.c
+			ft_split_multi.c ft_putchar.c ft_str_sandwich.c ft_wrap_malloc.c \
+			ft_atoll.c ft_free.c
 
 B_SRCFILE=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
 			ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
