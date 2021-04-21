@@ -24,6 +24,7 @@ char	**ft_addstr_split(char **list, const char *str)
 	list = ft_extend_split(list, i + 2);
 	if (list == NULL)
 	{
+		free(new_str);
 		ft_free_split(tmp);
 		return (NULL);
 	}
