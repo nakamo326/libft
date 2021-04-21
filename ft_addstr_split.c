@@ -4,7 +4,7 @@
 ** add duplicated STR to split char LIST.
 ** if LIST is NULL, return new list includes two elements(str and null).
 */
-char	**add_str_to_list(char **list, const char *str)
+char	**ft_addstr_split(char **list, const char *str)
 {
 	size_t	i;
 	char	*new_str;
