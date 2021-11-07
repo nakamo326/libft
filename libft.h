@@ -6,7 +6,7 @@
 /*   By: ynakamot <ynakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 16:49:44 by ynakamot          #+#    #+#             */
-/*   Updated: 2021/04/20 23:06:06 by ynakamot         ###   ########.fr       */
+/*   Updated: 2021/04/21 13:40:53 by ynakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,10 +77,10 @@ void		ft_lstiter(t_list *lst, void (*f)(void *));
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 void		ft_lstinsert(t_list *lst, t_list *new);
 void		*ft_free_split(char **strs);
-void		*ft_realloc(void *ptr, size_t size);
 int			ft_wmalloc(void **ptr, size_t size);
-void		*ft_sprealloc(void *ptr, size_t size);
 char		**ft_split_multi(char *str, char *set);
+char		**ft_extend_split(char **list, size_t index);
+char		**ft_addstr_split(char **list, const char *str);
 char		*ft_str_sandwich(char *filling, char *bread);
 void		ft_free(void	**ptr);
 
