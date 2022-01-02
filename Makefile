@@ -3,15 +3,15 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ynakamot <ynakamot@student.42tokyo.jp>     +#+  +:+       +#+         #
+#    By: ynakamot <ynakamot@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/13 10:43:27 by ynakamot          #+#    #+#              #
-#    Updated: 2021/04/21 13:32:22 by ynakamot         ###   ########.fr        #
+#    Updated: 2022/01/02 17:42:06 by ynakamot         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CFLAGS = -Wall -Wextra -Werror
 NAME = libft.a
+CFLAGS = -Wall -Wextra -Werror
 
 SRCFILE =	ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 			ft_memchr.c ft_memcmp.c ft_strlen.c ft_strlcpy.c ft_strlcat.c \
@@ -43,7 +43,7 @@ bonus: $(OBJECTS) $(B_OBJECTS)
 
 $(OBJDIR)/%.o: %.c
 	@mkdir -p $(OBJDIR)
-	gcc $(CFLAGS) -c $< -o $@ -I.
+	gcc $(CFLAGS) -I. -c $< -o $@
 
 clean:
 	$(RM) $(OBJECTS) $(B_OBJECTS)
